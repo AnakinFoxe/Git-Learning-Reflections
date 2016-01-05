@@ -1,0 +1,13 @@
+What happens when you initialize a repository? Why do you need to do it?
+>> A folder named .git is created when initializing a repository.
+>> This folder contains all the meta data, history and other info about the
+>> repository.
+>> Why do we need to init a repo? That's basically how we create a repo.
+
+How is the staging area different from the working directory and the repository? What value do you think it offers?
+>> Staging area contains uncommitted changes of the repo, while the working
+>> directory contains everything of the project, including committed changes,
+>> uncommitted changes, and files not added to the repo.
+>> Staging area acts like a buffer, between uncommitted changes and repository;
+>> it also acts like container, separates the uncommitted changes from working
+>> directory.
