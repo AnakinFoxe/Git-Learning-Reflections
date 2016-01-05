@@ -1,0 +1,49 @@
+How did viewing a diff between two versions of a file help you see the bug that was introduced?
+>> Because these bugs are introduced by some small changes to the old file.
+>> Most part of the old file was not changed.
+>> If we try to find these changes manually, we waste most of time on parts
+>> that are identical in both files.
+>> diff focus only on difference so it is quicker to find the bug with it.
+
+How could having easy access to the entire history of a file make you a more efficient programmer in the long term?
+>> It makes you easier to find the direct cause of a problem.
+>> For example, v1.01 file shows a problem that it never has.
+>> Then go back and compare v1.01 with its predecessor, say v1.00.
+>> The changes made between v1.01 and v1.00 are most likely the cause of the
+>> problem.
+>> So with the history, we can easily focus on small part of the file.
+
+What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like Google Docs does?
+>> Pros: 1. You can control the logical saving point.
+>>       2. Easy to add comments to every commit.
+>> Cons: 1. You might forget to commit.
+>>       2. You might make too small or too big commits.
+
+Why do you think some version control systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file separately?
+>> Basically it depends on how many files it depends on to work.
+>> No matter what, always make sure each commit is a logical-complete commit.
+>> For Google Docs, only one file is involved so no need for saving multiple
+>> files.
+>> But for software engineering where Git is used, normally a project will rely on
+>> multiple files.
+
+How can you use the commands git log and git diff to view the history of files?
+>> Use "git log --stat" under the project directory to view the commit history.
+>> Use "git diff version_id1 version_id2" to see the difference between two
+>> commits.
+
+How might using version control make you more confident to make changes that could break something?
+>> Because I can go back the state which does not have these changes, if these
+>> changes break things.
+
+Now that you have your workspace set up, what do you want to try using Git for?
+>> The projects I currently work on.
+
+
+Git Commands:
+git clone <url>         Clone the whole git repository of <url>
+git log [--stat]        Show the commits log of the repository starting from the latest one.
+                        --stat will display the brief info of changes in each file.
+git diff <c1> <c2>      Show difference between commit1 (<c1>) and commit2 (<c2>).
+git checkout <c1>       Show commit1 (<c1>) version of repository. 
+                        It is NOT the same as checkout in SVN.
