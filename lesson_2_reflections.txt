@@ -11,3 +11,41 @@ How is the staging area different from the working directory and the repository?
 >> Staging area acts like a buffer, between uncommitted changes and repository;
 >> it also acts like container, separates the uncommitted changes from working
 >> directory.
+
+How can you use the staging area to make sure you have one commit per logical change?
+>> By precisely controlling which files to be added to the commit.
+
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+>> The key is to keep the minimum impact to main (master) branch or other
+>> branches when adding or trying something new.
+
+How do the diagrams help you visualize the branch structure?
+>> It is way easier to understand the relationship between each created
+>> branches -- where they break apart, where they are and where they merge back
+
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+>> The changes made in two branches combined together and essentially two
+>> branches became one.
+>> The diagrams visualized branches make us easy to know the relations between
+>> branches.
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+>> Pros: Saves time
+>> Cons: Can't properly merge two files when conflicts present.
+
+
+
+Git Commands:
+git init                Initialize Git repository
+git add <file>          Add <file> to staging area
+git commit              Commit changes in staging area to repository
+           -m           Commit with comment
+git status              Display status of working directory and staging area
+git branch              Shows current branch
+           [name]       Create a new branch with [name]
+           -d [name]    Delete branch with [name]
+git checkout -b <name>  Create a new branch with [name] and checkout this branch
+git merge <b1> <b2>     Merge branch <b2> INTO branch <b1>.
+git log --graph [bs]    Show graph of relationship between branches 
+        --oneline       Each commit in one line
+git show <c1>           Show the difference between commit <c1> and its parent
