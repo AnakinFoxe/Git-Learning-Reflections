@@ -1,0 +1,8 @@
+
+
+
+Git Commands:
+git remote                      Display available remote repositories
+           -v                   in verbose mode
+           add <name> <url>     Add a remote with <name> and <url>
+git push <remote> <branch>      Push <branch> to <remote>
