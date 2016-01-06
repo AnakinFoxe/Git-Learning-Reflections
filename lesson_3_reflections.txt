@@ -1,9 +1,44 @@
 When would you want to use a remote repository rather than keeping all your work local?
+>> 1. Want to publish or share my work
+>> 2. Want to collaborate with others
+>> 3. Want to keep a copy of my local repo
 
+Why might you want to always pull changes manually rather than having Git automatically stay up-to-date with your remote repository?
+>> When I don't want my local repo sync with remote repo.
 
+Describe the differences between forks, clones, and branches. When would you use one instead of another?
+>> Clone copies everything from a repo and form another repo. Both repos could
+>> be remote or local.
+>> Fork is like Clone which only works for remote repos at GitHub.
+>> Branch does not copy everything from a repo, it just create another label
+>> for the coming commits.
+
+What is the benefit of having a copy of the last known state of the remote stored locally?
+>> So when I need to sync with remote, it will be easy to find the start point
+>> of changes.
+
+How would you collaborate without using Git or GitHub? What would be easier, and what would be harder?
+>> Either using SVN/CVS or manually do all the works including copy, merge,
+>> etc.
+>> It will be easier at the beginning if we do all the work manually because we
+>> don't need to learn anything new. But surely using Git and GitHub will be
+>> way easier in the long run and especially if we have a large group of people
+
+When would you want to make changes in a separate branch rather than directly in master? What benefits does each approach have?
+>> When collaborate with other people, or want to try something different but
+>> don't want to impact the master branch.
+>> With separate branches we can avoid conflicts when development is done
+>> simutaneously, and it will keep minimum possibility of messing up master
+>> branch.
+>> Dev on only master branch will be way easier to think in logically without
+>> getting confused with interactions between different branches.
 
 Git Commands:
 git remote                      Display available remote repositories
            -v                   in verbose mode
            add <name> <url>     Add a remote with <name> and <url>
 git push <remote> <branch>      Push <branch> to <remote>
+git pull <remote> <branch>      Pull <branch> from <remote>
+                                Equals to "git fetch" + "git merge"
+git fetch <remote>              Fetch the latest commit from origin without changing current branch
+                            
